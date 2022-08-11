@@ -55,11 +55,12 @@ describe('Salsa', ()  => {
 
 it('9. Realizar a consulta e validar que o resultado foi exibido', () => {
     cy.get('.btn-primary').click();
-    cy.get('id="filtered_transactions_for_account"').type('50');
+    cy.contains('id="filtered_transactions_for_account"').type('50');
 
 });   
 
 it('10. Realizar Logout e validar que o usuário não está mais logado', () => {
     cy.get('xpath=//*[@id="settingsBox"]/ul/li[3]/ul').click();
     cy.get('xpath=////*[@id="logout_link"]"').click();
-    cy.get('#signin_button"').type('Signin');
+    cy.contains('#signin_button"').type('Signin');
+});
