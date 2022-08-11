@@ -1,6 +1,7 @@
 /// <reference types="cypress" />
 
 describe('Salsa', ()  => {
+
   it('1. Acessar http://zero.webappsecurity.com/', () => {
       Cypress.config('chromeWebSecurity', true);
       cy.visit({
